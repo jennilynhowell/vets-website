@@ -1,0 +1,7 @@
+{
+  "appName": "time-of-need",
+  "entryFile": "./app-entry.jsx",
+  "entryName": "time-of-need-form",
+  "rootUrl": "/time-of-need",
+  "production": false
+}

@@ -1,4 +1,5 @@
 // import fullSchema from 'vets-json-schema/dist/XX-XXXXX-schema.json';
+import { submit } from '../utils/helpers';
 
 import IntroductionPage from '../containers/IntroductionPage';
 import ConfirmationPage from '../containers/ConfirmationPage';
@@ -10,8 +11,8 @@ import ConfirmationPage from '../containers/ConfirmationPage';
 
 const formConfig = {
   urlPrefix: '/',
-  submitUrl: '/v0/api',
-  trackingPrefix: 'time-of-need',
+  submit,
+  trackingPrefix: 'time-of-need-',
   introduction: IntroductionPage,
   confirmation: ConfirmationPage,
   formId: 'XX-XXXXX',
@@ -24,7 +25,7 @@ const formConfig = {
   title: 'Time of Need',
   defaultDefinitions: {},
   chapters: {
-    chapter1: {
+    intermentInformation: {
       title: 'Interment Information',
       pages: {
         page1: {
@@ -34,7 +35,7 @@ const formConfig = {
             burialActivityType: {
               'ui:title': 'Burial Type',
             },
-            emblem: {
+            emblemCode: {
               'ui:title': 'Emblem'
             },
             remainsType: {
@@ -45,7 +46,7 @@ const formConfig = {
             type: 'object',
             required: [
               'burialActivityType',
-              'emblem',
+              'emblemCode',
               'remainsType'
             ],
             properties: {
@@ -66,7 +67,7 @@ const formConfig = {
                   'Direct Interment'
                 ]
               },
-              emblem: {
+              emblemCode: {
                 type: 'string'
               },
               remainsType: {
